@@ -1,0 +1,42 @@
+{
+  "name": "sooth",
+  "version": "0.0.1",
+  "description": "Build your own prediction market",
+  "main": "main.js",
+  "dependencies": {
+    "babel": "^5.6.14",
+    "babel-runtime": "^5.6.15",
+    "ramda": "^0.15.1",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.7",
+    "react-router": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.2.2",
+    "file-loader": "^0.8.4",
+    "image-webpack-loader": "^1.6.1",
+    "imagemin": "^3.2.0",
+    "jsx-loader": "^0.13.2",
+    "jsxhint": "^0.15.1",
+    "node-libs-browser": "^0.5.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.10.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mkdir -p public && cp src/index.html public/ && webpack-dev-server --config webpack.config.js",
+    "build": "mkdir -p public && cp src/index.html public/ && NODE_ENV=production webpack -p --config webpack.production.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SohumB/sooth.git"
+  },
+  "author": "Sohum Banerjea <sohumb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SohumB/sooth/issues"
+  },
+  "homepage": "https://github.com/SohumB/sooth#readme"
+}
