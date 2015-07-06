@@ -7,7 +7,7 @@ export default React.createClass({
       <div>
         <header></header>
         <section className="content">
-          <RouteHandler />
+          <RouteHandler binding={ this.getDefaultBinding() } />
         </section>
         <footer></footer>
       </div>
