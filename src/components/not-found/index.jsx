@@ -1,6 +1,6 @@
-import React from 'react/addons';
+import { createClass } from 'utils';
 
-export default React.createClass({
+export default createClass({
   render() {
     return <div>Not found</div>;
   }

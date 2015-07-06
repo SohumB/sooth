@@ -1,13 +1,13 @@
-import React from 'react/addons';
+import { createClass } from 'utils';
 import { RouteHandler } from 'react-router';
 
-export default React.createClass({
+export default createClass({
   render() {
     return (
       <div>
         <header></header>
         <section className="content">
-          <RouteHandler binding={ this.getDefaultBinding() } />
+          <RouteHandler binding={ this.binding() } />
         </section>
         <footer></footer>
       </div>
