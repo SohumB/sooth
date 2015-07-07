@@ -6,6 +6,8 @@ import { DefaultRoute, Route, NotFoundRoute } from 'react-router';
 
 import Morearty from 'morearty';
 
+import Ctx from 'context';
+
 import Root from 'root';
 import App from 'components/app';
 
@@ -19,12 +21,6 @@ const routes = (
     <NotFoundRoute handler={NotFound} />
   </Route>
 );
-
-const Ctx = Morearty.createContext({
-  initialState: {
-
-  }
-});
 
 // this is based off https://github.com/moreartyjs/morearty-react-router
 export const Router = createClass({
