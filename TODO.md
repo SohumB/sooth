@@ -9,4 +9,13 @@
   * Market data (mostly computed from outstanding orders)
 
 * Visual components
-  * TBD
+  * MarketPage
+  * UsersList
+  * PredictionList
+  * UserPage
+   * List of Assets owned by user
+   * List of Assets underwritten by user
+  * MakeNewUser
+  * UnderwriteExistingPrediction
+  * MakeNewPrediction
+  * PlaceAnOrder
