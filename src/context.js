@@ -71,7 +71,8 @@ export default Morearty.createContext({
       { type: 'order', party: 3, offering: { money: 75 }, asking: { stock: 1 }, quantity: 500, date: step2 },
 
       // The system sees these matching buy and sell orders, and executes the trade
-      // principle: trade the minimum assets/balance necessary to fulfil both sides
+      // principle: second mover advantage, so you can put in an order that takes advantage of an
+      // existing counterparty order, but then settle down to your actual price
       { type: 'trade', party: 1, counterparty: 3, receiving: [{ money: 6000 }], sending: [{ stock: 1, quantity: 100 }], date: step2 },
 
       // so the computed state of the market now is that Cassie has an outstanding buy order
