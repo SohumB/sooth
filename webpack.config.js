@@ -9,6 +9,7 @@ module.exports = {
   ],
   devServer: {
     contentBase: './public/',
+    historyApiFallback: true,
     hot: true,
     watchOptions: {
       aggregateTimeout: 300
