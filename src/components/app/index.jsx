@@ -1,9 +1,10 @@
 import { createClass } from 'utils';
+import { Link } from 'react-router';
 
 export default createClass({
   render() {
     return (
-      <h1>Hello World!</h1>
+      <Link to="/users">Users</Link>
     );
   }
 });

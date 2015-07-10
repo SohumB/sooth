@@ -2,7 +2,7 @@ import React from 'react/addons';
 window.React = React;
 
 import ReactRouter from 'react-router';
-import { DefaultRoute, Route, NotFoundRoute } from 'react-router';
+import { DefaultRoute, Route, NotFoundRoute, RouteHandler } from 'react-router';
 
 import Morearty from 'morearty';
 
@@ -12,6 +12,8 @@ import Root from 'root';
 import App from 'components/app';
 
 import NotFound from 'components/not-found';
+
+import Users from 'components/users';
 
 import { createClass } from 'utils';
 
@@ -27,6 +29,11 @@ export const BindToChild = path => createClass({
 const routes = (
   <Route handler={Root}>
     <DefaultRoute handler={App} />
+
+    <Route path="/users" handler={BindToChild('users')}>
+      { Users }
+    </Route>
+
     <NotFoundRoute handler={NotFound} />
   </Route>
 );
