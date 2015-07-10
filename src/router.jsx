@@ -15,6 +15,15 @@ import NotFound from 'components/not-found';
 
 import { createClass } from 'utils';
 
+export const BindToChild = path => createClass({
+  render() {
+    const b = this.binding().sub(path);
+    b.meta().set('currentPath', this.meta().get('currentPath'));
+
+    return <RouteHandler binding={ b } />
+  }
+})
+
 const routes = (
   <Route handler={Root}>
     <DefaultRoute handler={App} />
