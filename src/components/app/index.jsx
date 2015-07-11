@@ -1,10 +1,16 @@
 import { createClass } from 'utils';
-import { Link } from 'react-router';
+import { RouteHandler } from 'react-router';
 
 export default createClass({
   render() {
     return (
-      <Link to="/users">Users</Link>
+      <div>
+        <header></header>
+        <section className="content">
+          <RouteHandler binding={ this.binding() } />
+        </section>
+        <footer></footer>
+      </div>
     );
   }
 });
