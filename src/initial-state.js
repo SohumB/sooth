@@ -77,22 +77,22 @@ export default {
     // an outstanding sell order for 300 JSs, for at least $25 each
 
     // now the market closes JS. Bad news for Cassie; Jordan was a spy,
-    // so the market closes the stock at $100, its full value
+    // so the market is going to close the stock at $100
 
-    { type: 'close-stock', stock: 'JS', money: 100, date: step3 },
-
-    // the market now forces anyone with JS in their inventory to trade it at the known value
-    // i.e., to buy it at the full value, if negative, and to sell it at the full value if positive
-    // these trades happen with counterparty null, representing the market
-
-    // Cassie is very sad. Aberforth is super happy!
-
-    { type: 'trade', party: 'aberforth', counterparty: null, receiving: { money: 30000 }, sending: { stock: 'JS', quantity: 300 }, date: step3 },
-    { type: 'trade', party: 'bertrand', counterparty: null, receiving: { money: 10000 }, sending: { stock: 'JS', quantity: 100 }, date: step3 },
-    { type: 'trade', party: 'cassie', counterparty: null, receiving: { stock: 'JS', quantity: 100 }, sending: { money: 10000 }, date: step3 },
-    { type: 'trade', party: 'deb', counterparty: null, receiving: { money: 10000 }, sending: { stock: 'JS', quantity: 100 }, date: step3 }
+    { type: 'close-stock', stock: 'JS', money: 100, date: step3 }
 
     // implicitly, Cassie's outstanding buy order is now also no longer in effect.
+
+    // the market forces anyone with the stock in their inventory to trade it at the final value
+    // so effectively the following "trades" happen
+
+    // they're not stored as actual trades in the market,
+    // so as to not affect the historical details of the stock
+
+    // { type: 'trade', party: 'aberforth', counterparty: null, receiving: { money: 30000 }, sending: { stock: 'JS', quantity: 300 }, date: step3 },
+    // { type: 'trade', party: 'bertrand', counterparty: null, receiving: { money: 10000 }, sending: { stock: 'JS', quantity: 100 }, date: step3 },
+    // { type: 'trade', party: 'cassie', counterparty: null, receiving: { stock: 'JS', quantity: 100 }, sending: { money: 10000 }, date: step3 },
+    // { type: 'trade', party: 'deb', counterparty: null, receiving: { money: 10000 }, sending: { stock: 'JS', quantity: 100 }, date: step3 }
   ]
 
 };
