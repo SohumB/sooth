@@ -8,8 +8,8 @@ import initialState from 'initial-state';
 import BindToChild from './bind-to-child';
 import Router from './router';
 
-import Root from 'components/root';
 import App from 'components/app';
+import Home from 'components/home';
 import Users from 'components/users';
 import NotFound from 'components/not-found';
 
@@ -20,8 +20,8 @@ import { createClass } from 'utils';
 const Ctx = Morearty.createContext({ initialState });
 
 const routes = (
-  <Route handler={Root}>
-    <DefaultRoute handler={App} />
+  <Route handler={App}>
+    <DefaultRoute handler={Home} />
 
     <Route path="/users" handler={BindToChild('users')}>
       { Users }
